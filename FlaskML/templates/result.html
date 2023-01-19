@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Yu-Gi-Oh! Card Stats Prediction</title>
+  </head>
+  <body class="font-mono" style="background-color:#1c1c1c">
+    <!-- Container -->
+    <style>
+      #preloader{
+      background: black url(static/img/loading_screen3.gif) no-repeat center center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+      }
+      @media only screen and (min-width: 1280px) {
+        .isi-content {
+          width:fit-content;
+        }
+      }
+      .isi-content{
+        margin:auto;
+      }
+    </style>
+    <div id="preloader"></div>
+    <div style="display: none">
+      <iframe width="560" src="https://www.youtube.com/embed/4S_SoFIw198" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" src="https://www.youtube.com/embed/4S_SoFIw198" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" src="https://www.youtube.com/embed/4S_SoFIw198" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="container mx-auto">
+      <div class="flex justify-center px-6 py-8 isi-content">
+        <div class="h-full w-full bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20" style="padding: 25px 20px;">
+          <a href="/" class="hover:text-indigo-500 w-1/12">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4 inline text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+              />
+            </svg>
+  
+            <p class="inline text-white">Back</p>
+          </a>
+  
+          <h3 class="pt-4 text-xl text-center text-white">Hi, {{name}} 👋.</h3>
+          <h3 class="text-2xl text-center text-white mb-4">Yu-Gi-Oh! Card Stats Result</h3>
+          <div class="flex justify-center">
+            <img
+              src="{{img}}"
+              alt="result"
+              class="w-60"
+            />
+          </div>
+          <h2
+            class="text-center text-bold text-white text-xl p-4 mx-16 rounded-lg mt-8"
+            style="background-color:#595959"
+            >
+            {{ prediction }}
+          </h2>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+  <script>
+    window.addEventListener('load', function(){
+      const preloader = document.getElementById('preloader');
+      preloader.style.display = 'none';
+    });
+  </script>
+</html>
